@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.HomePage {
+    display: flex;
+    background-color: rgb(30, 39, 96);
+    color: white;
+    flex-direction: column;
+    height: 100vh
+}
+
+.nav {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding-top: 10px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+
+.points {
+    display: flex;
+    flex: 0.6;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    font-weight: 900;
+    flex: 0.4;
+}
+
+.Logo {
+    height: 50px;
+    background-color: white;
+    width: 100px;
+    margin: 0 50px;
+}
+
+.container {
+    margin: 0 30px;
+    margin-top: 100px;
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding: 0 80px;
+    padding-top: 120px;
+    align-items: center;
+}
+
+.left button {
+    background-color: rgb(89, 187, 159);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2.2rem;
+    border-radius: 50px;
+    padding: 10px 100px;
+    margin: 20px 5px;
+    transition: all ease-in .2s;
+}
+
+.left button:hover {
+    background-color: rgb(78, 153, 132);
+}
+
+.right {
+    flex: 0.5;
+    margin: 55px 20px
+}
