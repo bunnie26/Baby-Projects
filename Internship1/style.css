@@ -5,85 +5,70 @@
     box-sizing: border-box;
 }
 
-.HomePage {
+body {
     display: flex;
-    background-color: rgb(30, 39, 96);
-    color: white;
-    flex-direction: column;
-    height: 100vh
-}
-
-.nav {
-    display: flex;
-    width: 100vw;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
-    margin-top: 30px;
-    font-size: 1.3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
+    min-height: 100vh;
+    background-color: #5d3800;
 }
 
-.points {
+.face {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #ffcd00;
     display: flex;
-    flex: 0.6;
-    justify-content: space-around;
-    list-style: none;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo {
-    display: flex;
-    font-weight: 900;
-    flex: 0.4;
+.face::before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    background-color: #b57700;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: al ease 0.3s;
 }
 
-.Logo {
-    height: 50px;
+.face:hover::before {
+    top: 210px;
+    width: 150px;
+    height: 20px;
+    background-color: #b57700;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.eyes {
+    position: relative;
+    top: -40px;
+    display: flex
+}
+
+.eyes .eye {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: block;
     background-color: white;
-    width: 100px;
-    margin: 0 50px;
+    margin-inline: 15px;
 }
 
-.container {
-    margin: 0 30px;
-    margin-top: 100px;
-    display: flex;
-}
-
-.left {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    padding: 0 80px;
-    padding-top: 120px;
-    align-items: center;
-}
-
-.left button {
-    background-color: rgb(89, 187, 159);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 2.2rem;
-    border-radius: 50px;
-    padding: 10px 100px;
-    margin: 20px 5px;
-    transition: all ease-in .2s;
-}
-
-.left button:hover {
-    background-color: rgb(78, 153, 132);
-}
-
-.right {
-    flex: 0.5;
-    margin: 55px 20px
+.eyes .eye::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
