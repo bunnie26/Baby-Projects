@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    top: 0px !important;
+    font-family: poppins;
+    margin: 0;
+    --black: #161616;
+    --white: #FFFFFF;
+    --blkis: #1C1C1C;
+    --greys: #A9A9A9;
+    --invrt: 1;
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    scrollbar-width: .5vw;
+    scrollbar-width: initial;
+    scrollbar-color: #FF7B01;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body.day {
+    --black: #FFFFFF;
+    --white: #181818;
+    --blkis: #F7F7F7;
+    --greys: #575757;
+    --invrt: 0;
+}
+
+.section {
+    background-image: url(/Task1/images/abc2.jpg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.description {
+    margin: 3em;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.description h1 {
+    border: none
+}
+
+.description hr {
+    border-top: 2px solid #FF7B01;
+    color: transparent;
+    border-style: solid;
+    width: 6em;
+    margin: 1.1em 0;
+}
+
+.investors {
+    display: inline-flex;
+    margin: 20px 0px;
+    padding-inline: 100px;
+    width: 100vw;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.investors .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.investors .card .main {
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all ease-in-out 0.3s;
+}
+
+.investors .card span {
+    display: block;
+    height: max(50px, min(10vw, 130px));
+    width: max(50px, min(10vw, 130px));
+    background-color: var(--white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.investors .card:nth-child(1) span {
+    background-image: url(/Task1/images/abc4.jpg);
+}
+
+.investors .card:nth-child(2) span {
+    background-image: url(/Task1/images/abc.jpg);
+}
+
+.investors .card:nth-child(3) span {
+    background-image: url(/Task1/images/abc1.png);
+}
+
+.investors .card:nth-child(4) span {
+    background-image: url(/Task1/images/abc3.jpg);
+}
+
+.investors .card:nth-child(5) span {
+    background-image: url(/Task1/images/abc5.jpg);
+}
+
+.investors .card:hover .main,
+.chief {
+    border-color: #FF7B01;
+    transform: scale(1.3);
+}
+
+.investors .card:hover p,
+.chief {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.investors p {
+    margin: 10px 0;
+}
+
+.popup {
+    /* opacity: 0;
+    pointer-events: none; */
+    max-width: 900px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #393939;
+    border-radius: 22px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.popup h1 {
+    font-size: 1.2rem;
+    margin: 15px 0
+}
+
+.popup hr {
+    border-top: 2px solid #FF7B01;
+    color: transparent;
+    border-style: solid;
+    width: 8em;
+    margin-bottom: 1.1em;
+}
+
+.popup p {
+    font-size: 0.9rem;
+    padding: 2px 20px;
+    margin-bottom: 20px
+}
+
+.popup .arrow {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 96%;
+    border: 1em solid transparent;
+    border-bottom-color: #393939;
+    transform: translateX(-50%)
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+}
+
+.news hr {
+    border-top: 2px solid #FF7B01;
+    color: transparent;
+    border-style: solid;
+    width: 6em;
+    margin: 1.3em 0;
+}
+
+.news .boxes {
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    word-wrap: break-word;
+}
+
+.news .box img {
+    height: 100%;
+    width: 100%;
+}
+
+.news .box {
+    margin: 50px;
+    justify-content: flex-start;
+    width: 18.75em;
+    height: 170px;
+    text-align: left;
+}
+
+@media screen and (max-width:769px) {
+    .news .box {
+        width: 13em;
+        font-size: 0.9rem;
+    }
+    .investors .card:hover .main {
+        transform: scale(1.1);
+    }
+}
