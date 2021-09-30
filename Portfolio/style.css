@@ -15,19 +15,26 @@ body{
 }
 /* svgs --------------------------------------------------------------*/
 .svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    animation:spin 4s linear infinite;
+    transform: translate(-50%,-50%);
 }
 .one{
     top: 93px;
     left:193px;
     transform: rotate(25deg);
 }
-.two{
+.two {
     top:10px;
     right:93px;
     stroke:#A9D8CE;
     stroke-width: 0.5;
-    transform: rotate(98deg);
+    
+    transform-origin: center;
+    transform: rotate(98deg) ;
 }
 /* ------------------------------------------------------------------- */
 .sidebar{
@@ -171,3 +178,6 @@ flex-direction: column;
     height:15px;
     width:15px;
 }
+
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
