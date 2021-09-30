@@ -15,11 +15,15 @@ body{
 }
 /* svgs --------------------------------------------------------------*/
 .svg{
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    animation:spin 4s linear infinite;
+    animation:spin 10s linear infinite;
+    transform: translate(-50%,-50%);
+}
+.svg path{
     transform: translate(-50%,-50%);
 }
 .one{
@@ -32,8 +36,6 @@ body{
     right:93px;
     stroke:#A9D8CE;
     stroke-width: 0.5;
-    
-    transform-origin: center;
     transform: rotate(98deg) ;
 }
 /* ------------------------------------------------------------------- */
@@ -180,4 +182,4 @@ flex-direction: column;
 }
 
 
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes spin { 0%{transform: rotate(0deg);} 100% { transform:rotate(360deg); } }
