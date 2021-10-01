@@ -11,6 +11,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    user-select: none;
 }
 html{
     scroll-behavior: smooth;
@@ -357,6 +358,7 @@ overflow-x: hidden;
     margin-right: 120px;;
 }
 .about-text p{
+    
     width:15em;
     padding:50px 0;
     font-size: 1.15em;
@@ -366,14 +368,14 @@ overflow-x: hidden;
     /* margin-left: 20px;; */
     display: flex;
     position: relative;
+    cursor: pointer;
 }
 .me{
     width:15em;
     height:20em;
     position: relative;
     z-index: 1;
-
-
+    border-radius: 15px;;
 }
 .me-bg{
     position: absolute;
@@ -381,14 +383,20 @@ overflow-x: hidden;
     height:20em;
     top:10%;
     left: 20%;
+    border-radius: 15px;
+
 }
 .about-text span{
     background-color: var(--orange);
     padding: 7px 18px;
     font-size: 1.375em;
     font-weight: 600;
+    cursor: pointer;
 }
-
+.about-text a{
+    text-decoration: none;
+    color: white;
+}
 
 @keyframes spin { 0%{transform: rotate(0deg);} 100% { transform:rotate(360deg); } }
 @keyframes spin2 { 0%{transform: rotate(0deg);} 100% { transform:rotate(-360deg); } }
