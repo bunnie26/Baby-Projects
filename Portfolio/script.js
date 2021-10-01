@@ -1,4 +1,6 @@
-window.addEventListener('mousemove', eyeball);
+// for moving EYE 
+
+document.querySelector('.body').addEventListener('mousemove', eyeball);
 
     function eyeball(event) {
         var eye = document.querySelector('.wrapper');
@@ -11,3 +13,17 @@ window.addEventListener('mousemove', eyeball);
         console.log(x,y)
 
     }
+
+// for changing navbar color
+
+var nav = document.querySelector(".nav");
+var lastScrollTop=0;
+window.addEventListener("scroll",()=>{
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop > lastScrollTop){
+        nav.style.top = "-80px";
+    } else{
+        nav.style.top="0"
+    }
+    lastScrollTop = scrollTop;
+})
